@@ -28,6 +28,16 @@ Closures have a different notation for arguments.
 
 def doubleIt = { x -> x + x}
 
+def doubleItWithoutLambda(x){
+	x+x
+}
+
+def integerNumber = 11
+println "integerNumber : $integerNumber"
+println "value is : ${doubleIt(5)}"
+
+def retValue = doubleItWithoutLambda(50)
+println "doubleItWithoutLamda(50) = $retValue"
 /*
 
 Groovy also allows for higher order functions. That is, functions that take
@@ -68,6 +78,13 @@ We can execute a closure for each item in the list.
 def printItem = {item -> println "List item: $item"}
 myList.each(printItem)
 
+def printEachItem = { item -> println "${item}"}
+def puneetList = ["Car", "Home", "Travel", "Peace"]
+//puneetList.each(printEachItem)
+
+puneetList.each{println "Element : $it"}//only 'it' will give the item value unless you have specifically defined it, like "item" or anything
+
+
 /*
 
 We can make this notation much more compact by declaring the closure in-
@@ -88,13 +105,22 @@ getters and setters for class properties.
 
 class GroovyGreeter {
     String greeting = "Default greeting"
+
+    def getGreeting(){
+	greeting	
+    }
+
+    def setGreeting(String greeting){
+	this.greeting = greeting
+    }
     def printGreeting(){println "Greeting: $greeting"}
 }
 
 def myGroovyGreeter = new GroovyGreeter()
 
 myGroovyGreeter.printGreeting()
-myGroovyGreeter.greeting = "My custom greeting"
+//myGroovyGreeter.greeting =  "My custom greeting"
+myGroovyGreeter.setGreeting "My custom greeting"
 myGroovyGreeter.printGreeting()
 
 /*

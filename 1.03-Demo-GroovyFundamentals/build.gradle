@@ -146,3 +146,13 @@ noArgs()
 //noArgs // Doesn't work
 //twoArgs oneArg 500, 200 // Also doesn't work as it's ambiguous
 twoArgs oneArg(500), 200 // Fixed the ambiguity
+
+
+def varWithoutType = 10
+println "varWihoutType is type ${varWithoutType.class} and has value ${varWithoutType}"
+
+def printName(){
+	println "My name is Puneet"
+}
+
+printName()

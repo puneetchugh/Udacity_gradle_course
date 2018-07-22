@@ -12,6 +12,32 @@ or, more compactly
 
 */
 
+task task1
+task1.description "Describing task1"
+task1.group "task1 group"
+/*
+task1.doLast{
+	println "inside task1 doLast"
+}*/
+task1 << {println "inside task1 doLast"}
+
+task task2 << {
+	println "inside task2 doLast"
+}
+
+task puneetTheChugh{
+	description = "Describing puneetTheChugh"
+	group = "group inside puneetTheChugh"
+	doLast{
+		println "inside puneetTheChugh task doLast"
+		task stringsAndTypes
+	}
+}
+
+task task3(description : "Describing task3") << {
+	println "inside task3 doLast"
+}
+
 task stringsAndTypes {
     doLast {
         // TODO: Run `$ gradle sAT`
