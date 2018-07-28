@@ -1,3 +1,6 @@
+import org.slf4j.Logger
+import org.slf4j.LoggerFactory
+
 /*
 
 In this series of exercises you'll be exploring how Gradle handles various
@@ -23,17 +26,26 @@ Exercises:
 
 */
 
-task hello(type: HelloTask)
+logging.captureStandardOutput LogLevel.QUIET
+
+task hello(type: HelloTask){
+    //dependsOn("derpy")
+}
+
+//hello.dependsOn("derpy")
 
 class HelloTask extends DefaultTask {
+Logger slf4jLogger = LoggerFactory.getLogger('some-logger')
+//slf4jLogger.info('An info log message logged using SLF4j')
     @TaskAction
     void doAction() {
+	slf4jLogger.info('Info log before printing Hello World')
         println 'Hello World'
+	slf4jLogger.info('Info log after printing Hello World')
     }
 }
 
 /*
 task derpy << {
-    primp "Herp de derp"
-}
-*/
+    primp "Herp de derp"//Caused by: org.gradle.internal.metaobject.AbstractDynamicObject$CustomMessageMissingMethodException: Could not find method primp() for arguments [Herp de derp] on task ':de			     //rpy' of type org.gradle.api.DefaultTask.
+}*/

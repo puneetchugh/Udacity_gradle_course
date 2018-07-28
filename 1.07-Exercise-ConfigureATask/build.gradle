@@ -9,7 +9,21 @@ Exercises:
 1. Create an empty task definition and name your task "hello".
 2. Give your task a description.
 3. Add an action to your task which prints "Hello World!"
+*/
+//Solution
 
+task hello{
+	description "Describing hello task"
+	doLast{
+		println "Hello World"
+	}
+}
+
+task helloTwo(description :  "Describing helloTwo task")<<{
+	println "Hello World - Two"
+}
+
+/*
 Hint: Take a look at the Gradle DSL Reference if you need help adding a
 description.
 

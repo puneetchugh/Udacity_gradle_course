@@ -17,6 +17,7 @@ Let's create a task that prints a greeting.
 task printGreeting {
     doLast {
        println greeting
+       println newGreeting
     }
 }
 

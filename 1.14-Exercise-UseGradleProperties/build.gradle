@@ -1,3 +1,8 @@
+
+/* You can also give two parameters in the command line 
+gradle -PwebOutputDir="webOpNew" -PzipFileName="wtf" bW
+*/
+
 /* 
 
 In this series of exercises you'll be practicing different ways to pass
@@ -21,8 +26,10 @@ in the webOutputDir property via the command line).
 */
 
 task bundleWeb(type: Zip) {
-    baseName = 'web'
+    
+    String zipFileName
+    baseName = zipFileName
     destinationDir = file(webOutputDir)
-
+    
     from 'src/web'
 }
