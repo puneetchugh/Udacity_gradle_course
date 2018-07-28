@@ -41,6 +41,6 @@ dependencies{
 task zipDeps(type : Zip){
 	baseName = "dependencyArchive"
 	classifier = 'deps'
-	version = '4.0'
+	vesion = '4.0'
 	from configurations.deps
 }

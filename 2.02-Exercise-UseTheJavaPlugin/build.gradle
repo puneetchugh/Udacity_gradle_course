@@ -10,3 +10,10 @@ Exercises:
    file.
 
 */
+
+apply plugin : 'java'
+
+task execute (type: JavaExec){
+	main = "main.java.com.udacity.gradle.Person.java"
+	classpath = sourceSets.main.runtimeClasspath	
+}
