@@ -1,0 +1,31 @@
+/*define a class and then assign its instance to closure delegate*/
+
+
+task task1{}
+class MyClass{
+
+	public String name;
+	int intVar;
+	void printInfo(){
+		System.out.println "name is : $name"
+		System.out.println "intVar is : $intVar"
+	}
+}
+
+def Closure = {
+	name = "Puneet Chugh"
+	intVar = 10
+	printInfo()
+
+	println getOwner()
+	//assert whatIsOwnerMethod() == getOwner() 
+	//def whatIsOwnerMethod = {getOwner()}
+	//assert whatIsOwnerMethod() == this
+
+	def whatIsOwner = {owner}
+	println whatIsOwner()
+	//assert whatIsOwner() == this
+}
+
+Closure.delegate = new MyClass()
+Closure()

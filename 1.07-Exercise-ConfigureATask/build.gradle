@@ -13,6 +13,7 @@ Exercises:
 //Solution
 
 task hello{
+	group "Group hello"
 	description "Describing hello task"
 	doLast{
 		println "Hello World"
@@ -20,6 +21,7 @@ task hello{
 }
 
 task helloTwo(description :  "Describing helloTwo task")<<{
+	group = "Group helloTwo"
 	println "Hello World - Two"
 }
 
