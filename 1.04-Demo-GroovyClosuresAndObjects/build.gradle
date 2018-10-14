@@ -150,3 +150,47 @@ resources to help you learn more, including:
     http://www.groovy-lang.org/documentation.html
 
 */
+
+
+/*
+def sum(a,b){
+	a+b
+}*/
+
+def sum = {a,b-> a+b}
+
+def apply2Times(func, a,b){
+	2*func(a,b)
+}
+
+def mySum = apply2Times(sum, 5, 10)
+
+def newSum = sum
+
+println "sum = ${newSum 2,4}"
+
+println "mySum = $mySum"
+
+def myVar = 10.5
+
+println "myVar type : ${myVar.class}"
+println "${myVar+10}"
+
+myVar = "assigned a string"
+println "variable "+"$myVar"
+//println $(apply2Times(sum, 2, 4))
+
+
+def newList = [2, 5, 8, 11, 17, 19]
+//newList.each{println "Hello"}
+newList.each{println "item value is $it"}
+
+def myPrintItem = {item -> println "item is ${item}"}
+newList.each(myPrintItem)
+//newList.each{myPrintItem} This won't work with {}
+
+/*
+def derivedList
+	.filter(s -> (s%2==0))
+	.collect(asList)
+*/

@@ -21,6 +21,16 @@ Challenges:
 
 */
 
+/*
+task1.mustRunAfter(hello)
+task task1{
+	description "Task one created!"
+	doFirst{
+		println "task1 executing..."		
+	}
+}
+*/
+
 task hello {
     description "Hey student! Run this one :D"
     group "Our demo"

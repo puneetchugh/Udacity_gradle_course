@@ -23,6 +23,13 @@ task helloTwo(description :  "Describing helloTwo task")<<{
 	println "Hello World - Two"
 }
 
+task task1 (description:"This is task1"){
+	doLast{
+		println("Hello task1")
+	}
+}
+
+task1.group = "Group task1"
 /*
 Hint: Take a look at the Gradle DSL Reference if you need help adding a
 description.
