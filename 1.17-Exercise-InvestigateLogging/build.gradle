@@ -41,7 +41,9 @@ Logger slf4jLogger = LoggerFactory.getLogger('some-logger')
     void doAction() {
 	slf4jLogger.info('Info log before printing Hello World')
         println 'Hello World'
+	//slf4jLogger.lifecycle('Hello World')
 	slf4jLogger.info('Info log after printing Hello World')
+	slf4jLogger.debug('Catch me if you can')
     }
 }
 

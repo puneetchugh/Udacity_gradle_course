@@ -28,8 +28,9 @@ in the webOutputDir property via the command line).
 task bundleWeb(type: Zip) {
     
     String zipFileName
-    baseName = zipFileName
+    baseName = zipFileName1
     destinationDir = file(webOutputDir)
     
     from 'src/web'
+
 }

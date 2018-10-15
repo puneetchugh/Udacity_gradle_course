@@ -16,11 +16,13 @@ Exercises:
 
 */
 
+
 class HelloTask extends DefaultTask{
+
 	@TaskAction
 	void doAction(){
-		println "Executing my custom task"
-	}	
+		println 'Executing my custom task !'
+	}
 }
 
 task hello(type : HelloTask)

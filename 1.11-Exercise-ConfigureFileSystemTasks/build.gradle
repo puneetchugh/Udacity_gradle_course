@@ -60,4 +60,8 @@ task unpackBundle(type : Copy){
 	into outputFile
 }
 
+task deleteHelp(type : Delete){
+	delete 'build/web/help'
+}
+
 }

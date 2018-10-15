@@ -15,11 +15,11 @@ Exercises:
 println 'First top level script element'
 
 task first {
-    println 'First task: Configuration'
-
+   
     doLast {
         println 'First task: Action'
     }
+    println 'First task: Configuration'
 }
 
 task second(dependsOn: first) {
@@ -30,4 +30,4 @@ task second(dependsOn: first) {
     }
 }
 
-println 'Second top level script element'
+println 'Last top level script element'
