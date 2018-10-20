@@ -10,4 +10,18 @@ public class Person {
     public String getName() {
         return name;
     }
+
+    public int getCardNumber(String cardNumber) throws NumberFormatException{
+	
+	String[] numberSets = cardNumber.split("-");
+
+	try{
+		int firstDigits = Integer.parseInt(numberSets[0]);
+		return firstDigits;
+	}catch(NumberFormatException nfe){
+		System.out.println("Produced nfe");
+		throw nfe;
+	}	
+	//return 0;
+    }
 }
