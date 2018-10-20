@@ -12,13 +12,13 @@ Android Manifest. We'll talk about the `buildTypes` block momentarily.
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 25
+    compileSdkVersion 26
     buildToolsVersion "24.0.3"
 
     defaultConfig {
         applicationId "com.example.android.myapplication"
         minSdkVersion 15
-        targetSdkVersion 25
+        targetSdkVersion 26
         versionCode 1
         versionName "1.0"
     }
@@ -40,5 +40,5 @@ library. We'll also be talking about this block more soon.
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile 'com.android.support:appcompat-v7:25.1.0'
+    compile 'com.android.support:appcompat-v7:26.0.1'
 }

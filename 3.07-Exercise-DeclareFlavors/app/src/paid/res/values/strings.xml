@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="product_flavor_name">Paid</string>
+    <string name="joke">Q: Why did the boy eat his homework?\nA: His teacher said it was a piece of cake.</string>
 </resources>
