@@ -10,6 +10,7 @@ import android.widget.TextView;
 import com.example.puneetchugh.modulejoke.MyClass;
 import com.example.puneetchugh.puneetlibrary.PuneetActivity;
 import com.puneet.chugh.JokeSmith;
+import com.puneet.chugh.NewJokeTeller;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -28,6 +29,8 @@ public class MainActivity extends AppCompatActivity {
         TextView textView2 = findViewById(R.id.text_view_2);
         textView2.setText(myClass.getJoke());
 
+        TextView textView1 = findViewById(R.id.textView);
+        textView1.setText((new NewJokeTeller()).getJoke());
 
         Button button = findViewById(R.id.button);
         button.setOnClickListener(new View.OnClickListener() {

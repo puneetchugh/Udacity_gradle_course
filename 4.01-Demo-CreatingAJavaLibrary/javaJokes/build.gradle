@@ -6,7 +6,7 @@ conventions. That means our build.gradle is super simple:
 */
 
 apply plugin:"java"
-
+apply plugin:"application"
 repositories {
     jcenter()
 }
@@ -14,6 +14,12 @@ repositories {
 dependencies {
     testCompile 'junit:junit:4.11'
 }
+task execute(type: JavaExec) {
+    main = "com.udacity.gradle.jokes.Joker"
+    classpath = sourceSets.main.runtimeClasspath
+}
+
+mainClassName = 'com.udacity.gradle.jokes.Joker'
 
 /*
 
@@ -24,7 +30,7 @@ line:
 
 */
 
-sourceCompatibility = 1.7
+sourceCompatibility = 1.8
 
 /*
 
