@@ -6,7 +6,7 @@ build script.
 */
 
 apply plugin: "java"
-
+apply plugin: "application"
 
 
 /*
@@ -53,6 +53,8 @@ task execute(type: JavaExec) {
     // We'll talk about this shortly
     classpath = sourceSets.main.runtimeClasspath
 }
+
+mainClassName='com.udacity.gradle.Person'
 
 /*
 

@@ -31,7 +31,15 @@ apply plugin : 'java'
 
 task execute (type: JavaExec){
 	main = "main.java.com.udacity.gradle.Person.java"
-	classpath = sourceSets.main.runtimeClasspath
+	classpath = sourceSets.main.runtimeClasspath	
+}
+
+sourceSets{
+	main{
+		java{
+			srcDir 'java'	
+		}
+	}
 }
 
 jar.doFirst{
