@@ -1,0 +1,18 @@
+apply plugin: 'java'
+
+repositories{
+	jcenter()
+}
+
+dependencies{
+	testImplementation 'junit:junit:4.11'
+	implementation project(':ModuleJoke')
+	implementation project(':JokeSmit')
+}
+
+sourceCompatibility = 1.8
+
+task runJava(type:JavaExec){
+	main = 'com.puneet.chugh.NewJokeTeller'
+	classpath = sourceSets.main.runtimeClasspath
+}

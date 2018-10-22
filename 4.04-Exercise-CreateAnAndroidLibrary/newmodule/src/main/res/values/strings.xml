@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">NewModule</string>
+    <string name="welcome">Hello world !</string>
+</resources>
